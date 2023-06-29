@@ -71,5 +71,26 @@ ul li{
     font-size: 20px;
     font-weight: 200;
     padding: 12px 12px 12px 50px;
-    user
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: url(unchecked-2.svg);
+    background-size: cover;
+    background-position: center;
+    top: 10px;
+    left: 8px;
+}
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(check-box-unchecked-1.svg);
 }
